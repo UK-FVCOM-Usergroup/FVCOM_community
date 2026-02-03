@@ -1,18 +1,24 @@
-# FVCOM 5.0.1
+# FVCOM 5.0.1 - European community edition
 
+This is a a fork of the ocean model FVCOM with various community maintained developments.
+
+The main model repository can be found at https://github.com/FVCOM-GitHub/FVCOM.git and 
 http://fvcom.smast.umassd.edu/
 
+In this repository we maintain: 
 
+main  - a fork of main from the FVCOM repository
+main_community (default) - the main branch as above with a small number of minor changes detailed below, all the feature branches are built on this
+FVCOM-fabm - contains an integration with FABM, a widely used biogeochemical model coupler, primarily maintained by Jim Clark (PML)
+FVCOM-energy - contains code for modelling of structures in the marine environment as a momentum sink, primarily maintained by Michela de Dominicis (NOC)
+FVCOM-ice - contains code to represent ice shelves, primarily maintained by Qin Zhou (ApN)
 
+Users are welcome to start their own feature branches, please prepend them with 'dev_' until they are mature.
 
-## Code download
+Additional repositories in the FVCOM community usergroup contain idealised test cases and code for compiling with cmake.
 
-To download the latest version of FVCOM:<br>
-git clone https://github.com/FVCOM-GitHub/FVCOM.git
+## Community edits
 
-To obtain an old version of FVCOM:<br>
-git clone --branch <strong>VERSION</strong> https://github.com/FVCOM-GitHub/FVCOM.git<br>
-where <strong>VERSION</strong> is the version number. All available verions can be found on https://github.com/FVCOM-GitHub/FVCOM/releases.
 
 
 ## Required libraries
@@ -66,11 +72,6 @@ The results could vary with different cpus and different flags selected. However
         mpiexec ./fvcom –casename=CASENAME<br>
       where CASENAME is the name of simulation case and must be consistent with the prefix of the namelist file. For example, the namelist file is named as ‘gom_run.nml’, then CASENAME is ‘gom’.
 
-
-## Testsuite
-
-We also provide a package of helping users to learn and run FVCOM, including benchmark test cases, offline models, necessary libraries, and processing tools. The package is available at:<br>
-https://drive.google.com/file/d/1xwcFjzkSNT26FBu83pq2I8oIGzPqnjUn/view
 
 
 
